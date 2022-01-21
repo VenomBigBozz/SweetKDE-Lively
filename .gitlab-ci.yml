@@ -5,8 +5,21 @@
 # Note that environment variables can be set in several places
 # See https://docs.gitlab.com/ee/ci/variables/#cicd-variable-precedence
 stages:
-- test
-sast:
-  stage: test
+- deploy
+pages:
+  stage: deploy
+  script:
+    - mkdir -p public
+    - pwd
+    - ls -l
+    - mv ./* ./public/
+    - cd ./public/
+    - ls -l
+  artifacts:
+    paths:
+    - public
+  only:
+    - branches
+
 include:
 - template: Security/SAST.gitlab-ci.yml
