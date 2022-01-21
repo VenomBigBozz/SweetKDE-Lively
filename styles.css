@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    font: normal 75% Arial, Helvetica, sans-serif;
+    background-color: #232741;
+    overflow: hidden;
+}
+
+canvas {
+    display: block;
+}
+
+.parallax-window {
+    min-height: 400px;
+    background: transparent;
+}
+
+#particles-js,
+#particles-js2,
+#particles-js3 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
