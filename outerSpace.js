@@ -122,12 +122,3 @@ const ParticlesConfig = {
     },
     retina_detect: true,
 };
-}
-window.addEventListener('DOMContentLoaded', (event) => {
-    var scene = document.getElementById('scene');
-    var parallaxInstance = new Parallax(scene);
-    init();
-    window.addEventListener('resize', (event) => {
-        init()
-    })
-});
