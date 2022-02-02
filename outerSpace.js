@@ -33,7 +33,7 @@ gsap.ticker.add(() => {
         parallaxIt('.cls-16', 50);
         //top-dx-lines
         parallaxIt('.cls-17', -28);
-        parallaxIt('.cls-18', -32);
+        parallaxIt('.cls-18', -34);
         parallaxIt('.cls-19', -30);
         //bottom-sx-lines
         parallaxIt('.cls-20', -25);
