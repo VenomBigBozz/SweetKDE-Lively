@@ -8,7 +8,7 @@
             "file": "${workspaceFolder}/index.html",
             "pathMappings": [
                 {
-                    "url": "file:///C:",
+                    "url": "file:///C:/Users/ricca/source/outerspace-lively/index.html",
                     "path": "c:"
                 }
             ]
