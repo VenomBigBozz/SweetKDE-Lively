@@ -1,0 +1,17 @@
+{
+    "configurations": [
+        {
+            "type": "firefox",
+            "request": "launch",
+            "reAttach": true,
+            "name": "Launch index.html",
+            "file": "${workspaceFolder}/index.html",
+            "pathMappings": [
+                {
+                    "url": "file:///C:",
+                    "path": "c:"
+                }
+            ]
+        }
+    ]
+}

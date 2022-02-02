@@ -1,14 +1,70 @@
-function initParallax() {
-    particlesJS("particles-js", ParticlesConfig);
-    particlesJS("particles-js2", ParticlesConfig);
-    particlesJS("particles-js3", ParticlesConfig);
+rect = document.querySelector('#svg').getBoundingClientRect();
+mouse = {
+    x: 0,
+    y: 0,
+    moved: false
+};
+gsap.ticker.add(() => {
+    if (mouse.moved) {
+        //bottom-line
+        parallaxIt('.cls-2', 15);
+        //top-line-dx
+        parallaxIt('.cls-3', -30);
+        //top-line-sx
+        parallaxIt('.cls-4', -90);
+        //outline-circle:
+        parallaxIt('.cls-5', 30); //sx
+        parallaxIt('.cls-6', -25); //dx
+        //big-circle-sx
+        parallaxIt('.cls-7', -40);
+        //little-circles-sx
+        parallaxIt('.cls-8', 85);
+        parallaxIt('.cls-9', -85);
+        //big-circle-dx
+        parallaxIt('.cls-10', -40);
+        //little-circles-dx
+        parallaxIt('.cls-11', -85);
+        parallaxIt('.cls-12', 85);
+        //center-logo-lines
+        parallaxIt('.cls-13', 35);
+        parallaxIt('.cls-14', 40);
+        parallaxIt('.cls-15', 45);
+        //center-logo
+        parallaxIt('.cls-16', 50);
+        //top-dx-lines
+        parallaxIt('.cls-17', -28);
+        parallaxIt('.cls-18', -32);
+        parallaxIt('.cls-19', -30);
+        //bottom-sx-lines
+        parallaxIt('.cls-20', -25);
+        parallaxIt('.cls-21', -30);
+    }
+    mouse.moved = false;
+});
+
+function initParticlesJS(config) {
+    particlesJS("particles-js", config);
+    particlesJS("Cerchio-sinistro", config);
+}
+
+function parallaxIt(target, movement) {
+    gsap.to(target, {
+        x: ((mouse.x - rect.width / 2) / rect.width) * movement,
+        y: ((mouse.y - rect.height / 2) / rect.height) * movement,
+        duration: 0.3,
+    });
 }
 window.addEventListener('DOMContentLoaded', (event) => {
-    var scene = document.getElementById('scene');
-    var parallaxInstance = new Parallax(scene);
-    initParallax();
+    window.addEventListener('mousemove', (event) => {
+        mouse.moved = true;
+        mouse.x = event.clientX - rect.left;
+        mouse.y = event.clientY - rect.top;
+    });
+
+    initParticlesJS(ParticlesConfig);
     window.addEventListener('resize', (event) => {
-        initParallax()
+        rect = document.querySelector('#svg').getBoundingClientRect();
+        initParticlesJS(ParticlesConfig);
     })
 });
 
@@ -50,7 +106,7 @@ const ParticlesConfig = {
             },
         },
         size: {
-            value: 2,
+            value: 1.8,
             random: true,
             anim: {
                 enable: true,
@@ -103,7 +159,7 @@ const ParticlesConfig = {
             },
             bubble: {
                 distance: 131.85970127784034,
-                size: 2.1,
+                size: 2,
                 duration: 0,
                 opacity: 1,
                 speed: 3,
