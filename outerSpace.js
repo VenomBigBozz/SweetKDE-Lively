@@ -5,33 +5,33 @@ let mouse = {
     moved: false
 };
 
-let className = {
-    '.cls-2': 15,   //bottom-line
-    '.cls-3': -50,  //top-line-dx
-    '.cls-4': -90,  //top-line-sx
-    '.cls-5': 30,   //outline-circle-sx
-    '.cls-6': -25,  //outline-circle-dx
-    '.cls-7': -40,  //big-circle-sx
-    '.cls-8': 85,   //top-little-circle-sx
-    '.cls-9': -85,  //top-little-circle-dx
-    '.cls-10': -40, //big-circle-dx
-    '.cls-11': -85, //bottom-little-circle-dx
-    '.cls-12': 85,  //bottom-little-circle-sx
-    '.cls-13': 40,  //center-logo-line #1
-    '.cls-14': 45,  //center-logo-line #2
-    '.cls-15': 50,  //center-logo-line #3
-    '.cls-16': 50,  //center-logo
-    '.cls-17': -28, //top-dx-lines #1
-    '.cls-18': -32, //top-dx-lines #2
-    '.cls-19': -30, //top-dx-lines #3
-    '.cls-20': 29,  //bottom-sx-lines #1
-    '.cls-21': 30,  //bottom-sx-lines #2
+let svgSpeed = {
+    '#capsule1': 15,    //bottom-line
+    '#capsule2': -50,   //top-line-dx
+    '.cls-4': -90,      //top-line-sx
+    '.cls-5': 30,       //outline-circle-sx
+    '.cls-6': -25,      //outline-circle-dx
+    '.cls-7': -40,      //big-circle-sx
+    '.cls-8': 85,       //top-little-circle-sx
+    '.cls-9': -85,      //top-little-circle-dx
+    '.cls-10': -40,     //big-circle-dx
+    '.cls-11': -85,     //bottom-little-circle-dx
+    '.cls-12': 85,      //bottom-little-circle-sx
+    '.cls-13': 45,      //center-logo-line #1
+    '.cls-14': 50,      //center-logo-line #2
+    '.cls-15': 55,      //center-logo-line #3
+    '.cls-16': 50,      //center-logo
+    '.cls-17': -28,     //top-dx-lines #1
+    '.cls-18': -32,     //top-dx-lines #2
+    '.cls-19': -30,     //top-dx-lines #3
+    '.cls-20': 29,      //bottom-sx-lines #1
+    '.cls-21': 30,      //bottom-sx-lines #2
 };
 
 gsap.ticker.add(() => {
     if (mouse.moved) {
-        for (let key in className) {
-            parallaxIt(key, className[key]);
+        for (let key in svgSpeed) {
+            parallaxIt(key, svgSpeed[key]);
         }
     }
     mouse.moved = false;
