@@ -109,8 +109,8 @@ body {
 
 #center-logo {
     position: absolute;
-    top: 57%;
-    left: 50%;
+    top: 56%;
+    left: 49%;
     transform: translate(-50%, -50%) scale(1);
     display: flex;
     justify-content: center;

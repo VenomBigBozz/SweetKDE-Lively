@@ -19,9 +19,9 @@ let svgSpeed = {
     '.cls-10': 40, //big-circle-dx
     '.cls-11': -85, //bottom-little-circle-dx
     '.cls-12': 85, //bottom-little-circle-sx
-    '.cls-13': 65, //center-logo-line #1
-    '.cls-14': 70, //center-logo-line #2
-    '.cls-15': 75, //center-logo-line #3
+    '.cls-13': 55, //center-logo-line #1
+    '.cls-14': 60, //center-logo-line #2
+    '.cls-15': 65, //center-logo-line #3
     '.cls-17': -28, //top-dx-lines #1
     '.cls-18': -32, //top-dx-lines #2
     '.cls-19': -30, //top-dx-lines #3
