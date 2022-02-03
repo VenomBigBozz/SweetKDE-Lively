@@ -27,7 +27,7 @@ body {
 #capsule1 {
     top: 70%;
     left: 55%;
-    rotate: -30deg;
+    transform: rotate(-30deg);
     width: 35vw;
     height: 13vh;
     border-radius: 100px;
@@ -56,7 +56,7 @@ body {
 #capsule2 {
     top: 0;
     left: 55%;
-    rotate: -30deg;
+    transform: rotate(-30deg);
     width: 25vw;
     height: 20vh;
     border-radius: 100px;
